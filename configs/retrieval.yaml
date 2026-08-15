@@ -1,0 +1,11 @@
+default:
+  mode: hybrid # dense | bm25 | hybrid
+  top_k: 10
+  hybrid_alpha: 0.5 # weight on dense score in [0,1]; (1-alpha) on BM25
+  use_reranker: false
+  rerank_top_n: 20 # candidates fed to reranker before truncating to top_k
+  translate_query_to_english: false
+
+vector_store:
+  backend: faiss # faiss | supabase
+  index_dir: "data/index"

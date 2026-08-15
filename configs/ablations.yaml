@@ -1,0 +1,29 @@
+# Each entry is one axis from plan section 2 ("Ablations to run"). The
+# ablation runner sweeps one axis at a time against the `baseline` config,
+# holding everything else fixed, so results are attributable to a single
+# design choice.
+baseline:
+  embedding_model: bge-m3
+  chunk_size: 512
+  overlap: 64
+  retrieval_mode: hybrid
+  use_reranker: false
+  translate_query_to_english: false
+  use_agent: false
+
+axes:
+  - name: embedding_model
+    values: [bge-m3, multilingual-e5-large, minilm-multilingual]
+  - name: chunking
+    values:
+      - { chunk_size: 256, overlap: 32 }
+      - { chunk_size: 512, overlap: 64 }
+      - { chunk_size: 1024, overlap: 128 }
+  - name: retrieval_mode
+    values: [dense, bm25, hybrid]
+  - name: use_reranker
+    values: [false, true]
+  - name: translate_query_to_english
+    values: [false, true]
+  - name: use_agent
+    values: [false, true] # naive RAG vs LangGraph self-correcting CRAG loop

@@ -1,0 +1,69 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+--- Running embedding_model_bge-m3 ---
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|##########| 391/391 [00:00<00:00, 14270.81it/s]
+C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\.venv\Lib\site-packages\huggingface_hub\file_download.py:141: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\kirkb\.cache\huggingface\hub\models--intfloat--multilingual-e5-large. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+
+--- Running embedding_model_multilingual-e5-large ---
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights:  48%|####7     | 186/391 [00:00<00:00, 1624.75it/s]Loading weights: 100%|##########| 391/391 [00:00<00:00, 2326.76it/s]
+C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\.venv\Lib\site-packages\huggingface_hub\file_download.py:141: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\kirkb\.cache\huggingface\hub\models--BAAI--bge-reranker-v2-m3. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+
+--- Running embedding_model_minilm-multilingual ---
+
+--- Running chunking_256_32 ---
+
+--- Running chunking_512_64 ---
+
+--- Running chunking_1024_128 ---
+
+--- Running retrieval_mode_dense ---
+
+--- Running retrieval_mode_bm25 ---
+
+--- Running retrieval_mode_hybrid ---
+
+--- Running use_reranker_False ---
+
+--- Running use_reranker_True ---
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:  64%|######4   | 253/393 [00:00<00:00, 2506.58it/s]Loading weights: 100%|##########| 393/393 [00:00<00:00, 2450.34it/s]
+C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\.venv\Lib\site-packages\huggingface_hub\file_download.py:141: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\kirkb\.cache\huggingface\hub\models--Helsinki-NLP--opus-mt-tl-en. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\src\taglish_rag\eval\ablate.py", line 96, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\src\taglish_rag\eval\ablate.py", line 75, in main
+    all_results[name] = run_axis(name, axis["values"], baseline)
+                        ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\src\taglish_rag\eval\ablate.py", line 53, in run_axis
+    result = run_retrieval_eval(cfg, label=label)
+  File "C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\src\taglish_rag\eval\runner.py", line 40, in run_retrieval_eval
+    retrieved = retriever.retrieve(item.question)
+  File "C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\src\taglish_rag\retrieval\retriever.py", line 72, in retrieve
+    query = self._maybe_translate(query)
+  File "C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\src\taglish_rag\retrieval\retriever.py", line 68, in _maybe_translate
+    return translate_to_english(query)
+  File "C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\src\taglish_rag\retrieval\translate.py", line 23, in translate_to_english
+    translator = _get_translator()
+  File "C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\src\taglish_rag\retrieval\translate.py", line 18, in _get_translator
+    _translator = pipeline("translation", model="Helsinki-NLP/opus-mt-tl-en")
+  File "C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\.venv\Lib\site-packages\transformers\pipelines\__init__.py", line 974, in pipeline
+    normalized_task, targeted_task, task_options = check_task(task)
+                                                   ~~~~~~~~~~^^^^^^
+  File "C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\.venv\Lib\site-packages\transformers\pipelines\__init__.py", line 359, in check_task
+    return PIPELINE_REGISTRY.check_task(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\kirkb\Desktop\Creativity\Programming\claude larp\.venv\Lib\site-packages\transformers\pipelines\base.py", line 1358, in check_task
+    raise KeyError(f"Unknown task {task}, available tasks are {self.get_supported_tasks()}")
+KeyError: "Unknown task translation, available tasks are ['any-to-any', 'audio-classification', 'automatic-speech-recognition', 'depth-estimation', 'document-question-answering', 'feature-extraction', 'fill-mask', 'image-classification', 'image-feature-extraction', 'image-segmentation', 'image-text-to-text', 'keypoint-matching', 'mask-generation', 'ner', 'object-detection', 'sentiment-analysis', 'table-question-answering', 'text-classification', 'text-generation', 'text-to-audio', 'text-to-speech', 'token-classification', 'video-classification', 'zero-shot-audio-classification', 'zero-shot-classification', 'zero-shot-image-classification', 'zero-shot-object-detection']"
+
+--- Running translate_query_to_english_False ---
+
+--- Running translate_query_to_english_True ---

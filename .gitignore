@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.env.example
+.env.local
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+README.md
+todo.md
+next_project_plan.md
+LICENSE
+data\raw\philhealth\PC2024-0037.pdf # on separate commit
+
+# The scraped corpus (data/raw) and its chunked form (data/processed) are
+# committed on purpose -- this is a published benchmark, not a build
+# artifact, and CI's smoke eval depends on the corpus being present without
+# re-scraping live government sites on every run.
+data/processed/doc_text_raw/
+data/processed/doc_text_clean/
+data/index/
+*.faiss
+*.npy
+
+# results (regenerable, but keep summary tables)
+results/cache/
+results/*.tmp.json
+
+# OS
+.DS_Store
+Thumbs.db

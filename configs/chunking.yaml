@@ -1,0 +1,10 @@
+# Chunking is an ablation axis (plan section 2), not a fixed choice.
+# `default` is what ingest uses unless --chunk-size/--overlap are passed.
+default:
+  chunk_size: 512
+  overlap: 64
+  tokenizer: cl100k_base # tiktoken encoding used to count tokens
+
+sweep:
+  chunk_sizes: [256, 512, 1024]
+  overlaps: [32, 64, 128] # paired index-for-index with chunk_sizes

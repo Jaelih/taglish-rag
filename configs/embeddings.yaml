@@ -1,0 +1,20 @@
+default: bge-m3
+
+models:
+  bge-m3:
+    hf_id: "BAAI/bge-m3"
+    dim: 1024
+    normalize: true
+  multilingual-e5-large:
+    hf_id: "intfloat/multilingual-e5-large"
+    dim: 1024
+    normalize: true
+    query_prefix: "query: "
+    passage_prefix: "passage: "
+  minilm-multilingual:
+    hf_id: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    dim: 384
+    normalize: true
+
+reranker:
+  hf_id: "BAAI/bge-reranker-v2-m3"

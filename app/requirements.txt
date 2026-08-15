@@ -1,0 +1,20 @@
+# Runtime deps for the deployed Gradio app (HF Spaces, Docker SDK).
+# Ingestion-only deps (pdfplumber, beautifulsoup4, requests scrapers) are
+# intentionally excluded -- the Space serves a pre-built corpus, it doesn't
+# scrape or ingest at runtime. See pyproject.toml for the full dev/ingest
+# dependency set.
+gradio>=4.40
+sentence-transformers>=3.0
+faiss-cpu>=1.8
+rank_bm25>=0.2.2
+tiktoken>=0.7
+langdetect>=1.0.9
+langgraph>=0.2
+langchain-core>=0.3
+groq>=0.9
+google-generativeai>=0.7
+pydantic>=2.7
+pyyaml>=6.0
+python-dotenv>=1.0
+numpy>=1.26
+transformers>=4.40

@@ -1,0 +1,23 @@
+# Seed URLs for corpus acquisition. Kept small and hand-curated (per plan:
+# "150-300 docs is plenty", scope-locked to 3 agencies) rather than an
+# open-ended crawler, so the corpus stays auditable and reproducible.
+bir:
+  base_url: "https://www.bir.gov.ph"
+  listing_pages:
+    - "https://www.bir.gov.ph/index.php/tax-information/frequently-asked-questions.html"
+    - "https://www.bir.gov.ph/index.php/revenue-issuances/revenue-memorandum-circulars.html"
+  doc_type: mixed # html FAQ pages + linked PDFs (RMCs)
+
+philhealth:
+  base_url: "https://www.philhealth.gov.ph"
+  listing_pages:
+    - "https://www.philhealth.gov.ph/members/"
+    - "https://www.philhealth.gov.ph/circulars/"
+  doc_type: mixed
+
+pagibig:
+  base_url: "https://www.pagibigfund.gov.ph"
+  listing_pages:
+    - "https://www.pagibigfund.gov.ph/faqsloans.html"
+    - "https://www.pagibigfund.gov.ph/circulars.html"
+  doc_type: mixed
