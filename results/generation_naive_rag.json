@@ -1,0 +1,53 @@
+{
+  "label": "naive_rag",
+  "backend": "gemini",
+  "use_agent": false,
+  "n_items": 3,
+  "elapsed_sec": 17.413675546646118,
+  "groundedness": 1.0,
+  "correctness": 1.0,
+  "citation_accuracy": 1.0,
+  "refusal_accuracy_on_unanswerable": NaN,
+  "judge_parse_success_rate": 1.0,
+  "rows": [
+    {
+      "qid": "bir-01-en",
+      "question_type": "factual",
+      "language": "en",
+      "answer": "The new deadline for the filing of the 2025 Annual Income Tax Return and the payment of corresponding taxes is **May 15, 2026**.\n\nSource: [RMC No. 30-2026]",
+      "groundedness": 1.0,
+      "correctness": 1.0,
+      "citation_accuracy": 1.0,
+      "judge_is_refusal": false,
+      "heuristic_is_refusal": false,
+      "expected_refusal": false,
+      "judge_parse_ok": true
+    },
+    {
+      "qid": "bir-01-tl",
+      "question_type": "factual",
+      "language": "tl",
+      "answer": "Ang bagong deadline para sa pag-file ng 2025 Annual Income Tax Returns at pagbabayad ng kaukulang buwis ay pinalawig hanggang **Mayo 15, 2026**.\n\nSource: [RMC No. 30-2026]",
+      "groundedness": 1.0,
+      "correctness": 1.0,
+      "citation_accuracy": 1.0,
+      "judge_is_refusal": false,
+      "heuristic_is_refusal": false,
+      "expected_refusal": false,
+      "judge_parse_ok": true
+    },
+    {
+      "qid": "bir-01-tg",
+      "question_type": "factual",
+      "language": "taglish",
+      "answer": "Paumanhin, ngunit hindi matatagpuan sa ibinigay na konteksto ang sagot tungkol sa bagong deadline ng 2025 AITR filing. Ang mga impormasyong narito ay tungkol lamang sa Pag-IBIG housing programs, Pag-IBIG savings, at Revenue Memorandum Circular (RMC) No. 29-2024 na tumutukoy sa pag-extend ng deadline ng BIR Form 2316 para sa taong 2024.",
+      "groundedness": 1.0,
+      "correctness": 1.0,
+      "citation_accuracy": 1.0,
+      "judge_is_refusal": true,
+      "heuristic_is_refusal": false,
+      "expected_refusal": false,
+      "judge_parse_ok": true
+    }
+  ]
+}

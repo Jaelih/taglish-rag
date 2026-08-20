@@ -1,0 +1,268 @@
+{
+  "label": "ci_smoke",
+  "config": {
+    "chunk_size": 512,
+    "overlap": 64,
+    "embedding_model": "bge-m3",
+    "mode": "bm25",
+    "top_k": 10,
+    "hybrid_alpha": 0.5,
+    "use_reranker": false,
+    "rerank_top_n": 20,
+    "translate_query_to_english": false
+  },
+  "n_items": 20,
+  "elapsed_sec": 0.07784628868103027,
+  "overall": {
+    "recall@1": 0.4,
+    "recall@5": 0.8,
+    "recall@10": 0.8,
+    "mrr": 0.575,
+    "ndcg@10": 0.604943694208509
+  },
+  "by_language": {
+    "en": {
+      "recall@1": 0.8571428571428571,
+      "recall@5": 0.9285714285714286,
+      "recall@10": 0.9285714285714286,
+      "mrr": 1.0,
+      "ndcg@10": 0.9271946440147868
+    },
+    "tl": {
+      "recall@1": 0.0,
+      "recall@5": 0.7142857142857143,
+      "recall@10": 0.7142857142857143,
+      "mrr": 0.22142857142857145,
+      "ndcg@10": 0.329958193093218
+    },
+    "taglish": {
+      "recall@1": 0.3333333333333333,
+      "recall@5": 0.75,
+      "recall@10": 0.75,
+      "mrr": 0.4916666666666667,
+      "ndcg@10": 0.5498006707356912
+    }
+  },
+  "per_item": [
+    {
+      "qid": "bir-01-en",
+      "language": "en",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 0.5,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 1.0,
+      "ndcg@10": 0.8772153153380493
+    },
+    {
+      "qid": "bir-01-tl",
+      "language": "tl",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 0.0,
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "mrr": 0.2,
+      "ndcg@10": 0.23719771276929622
+    },
+    {
+      "qid": "bir-01-tg",
+      "language": "taglish",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0
+    },
+    {
+      "qid": "bir-02-en",
+      "language": "en",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 1.0,
+      "ndcg@10": 1.0
+    },
+    {
+      "qid": "bir-02-tl",
+      "language": "tl",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.2,
+      "ndcg@10": 0.38685280723454163
+    },
+    {
+      "qid": "bir-02-tg",
+      "language": "taglish",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 1.0,
+      "ndcg@10": 1.0
+    },
+    {
+      "qid": "bir-03-en",
+      "language": "en",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 1.0,
+      "ndcg@10": 1.0
+    },
+    {
+      "qid": "bir-03-tl",
+      "language": "tl",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.5,
+      "ndcg@10": 0.6309297535714575
+    },
+    {
+      "qid": "bir-03-tg",
+      "language": "taglish",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 1.0,
+      "ndcg@10": 1.0
+    },
+    {
+      "qid": "bir-04-en",
+      "language": "en",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 1.0,
+      "ndcg@10": 1.0
+    },
+    {
+      "qid": "bir-04-tl",
+      "language": "tl",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.25,
+      "ndcg@10": 0.43067655807339306
+    },
+    {
+      "qid": "bir-04-tg",
+      "language": "taglish",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.5,
+      "ndcg@10": 0.6309297535714575
+    },
+    {
+      "qid": "bir-05-en",
+      "language": "en",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 0.5,
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "mrr": 1.0,
+      "ndcg@10": 0.6131471927654584
+    },
+    {
+      "qid": "bir-05-tl",
+      "language": "tl",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 0.0,
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "mrr": 0.2,
+      "ndcg@10": 0.23719771276929622
+    },
+    {
+      "qid": "bir-05-tg",
+      "language": "taglish",
+      "question_type": "factual",
+      "agency": "bir",
+      "recall@1": 0.0,
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "mrr": 0.2,
+      "ndcg@10": 0.23719771276929622
+    },
+    {
+      "qid": "bir-06-en",
+      "language": "en",
+      "question_type": "multi_hop",
+      "agency": "bir",
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 1.0,
+      "ndcg@10": 1.0
+    },
+    {
+      "qid": "bir-06-tl",
+      "language": "tl",
+      "question_type": "multi_hop",
+      "agency": "bir",
+      "recall@1": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0
+    },
+    {
+      "qid": "bir-06-tg",
+      "language": "taglish",
+      "question_type": "multi_hop",
+      "agency": "bir",
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.25,
+      "ndcg@10": 0.43067655807339306
+    },
+    {
+      "qid": "bir-07-en",
+      "language": "en",
+      "question_type": "multi_hop",
+      "agency": "bir",
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 1.0,
+      "ndcg@10": 1.0
+    },
+    {
+      "qid": "bir-07-tl",
+      "language": "tl",
+      "question_type": "multi_hop",
+      "agency": "bir",
+      "recall@1": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.2,
+      "ndcg@10": 0.38685280723454163
+    }
+  ]
+}

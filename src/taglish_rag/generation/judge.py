@@ -1,8 +1,9 @@
 """LLM-as-judge for generation quality: groundedness, answer correctness,
 citation accuracy, and refusal accuracy on deliberately unanswerable
-questions. Uses the same pluggable Generator backend as answer generation
-(judge model configurable independently in practice by pointing
-GENERATOR_BACKEND at a different provider for the judge call).
+questions. Takes a Generator by injection and so shares the Gemini backend
+with answer generation -- judge and system-under-test are not independent,
+which is exactly why judge-vs-human agreement is reported separately (see
+taglish_rag/eval/kappa.py).
 
 Judge output is parsed as JSON; a malformed/unparseable response degrades
 to a `None` score rather than crashing the eval run, and is counted

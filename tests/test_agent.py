@@ -1,5 +1,6 @@
+from conftest import StubGenerator
+
 from taglish_rag.agent.crag import _heuristic_grade, build_crag_graph, run_naive_rag
-from taglish_rag.generation.generator import MockGenerator
 from taglish_rag.schemas import RetrievedChunk
 
 
@@ -32,7 +33,7 @@ def test_heuristic_grade_weak_when_nothing_retrieved():
 
 def test_crag_graph_strong_retrieval_skips_rewrite():
     retriever = FakeRetriever(score=0.9)
-    app = build_crag_graph(retriever, MockGenerator())
+    app = build_crag_graph(retriever, StubGenerator())
     final_state = app.invoke({"question": "What are the penalties?", "rewrite_count": 0})
     assert final_state["grade"] == "strong"
     assert final_state.get("rewrite_count", 0) == 0
@@ -47,7 +48,7 @@ def test_crag_graph_weak_retrieval_triggers_one_rewrite_then_stops(monkeypatch):
     monkeypatch.setattr(crag_module, "_heuristic_rewrite", lambda q: q + " (rewritten)")
 
     retriever = FakeRetriever(score=0.01)  # always weak, even after rewrite
-    app = build_crag_graph(retriever, MockGenerator())
+    app = build_crag_graph(retriever, StubGenerator())
     final_state = app.invoke({"question": "Ano ang parusa?", "rewrite_count": 0})
     # MAX_REWRITES=1, so it should rewrite exactly once then proceed to generate
     assert final_state["rewrite_count"] == 1
@@ -56,6 +57,6 @@ def test_crag_graph_weak_retrieval_triggers_one_rewrite_then_stops(monkeypatch):
 
 def test_naive_rag_never_rewrites():
     retriever = FakeRetriever(score=0.01)
-    state = run_naive_rag(retriever, "Ano ang parusa?", MockGenerator())
+    state = run_naive_rag(retriever, "Ano ang parusa?", StubGenerator())
     assert "rewrite_count" not in state or state.get("rewrite_count", 0) == 0
     assert "answer" in state

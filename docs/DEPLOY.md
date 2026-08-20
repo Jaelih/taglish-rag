@@ -7,7 +7,7 @@ docker build -t taglish-rag .
 docker run -p 7860:7860 --env-file .env taglish-rag
 ```
 
-Without a `.env` (or with `GENERATOR_BACKEND=mock`), the app runs fully offline — retrieval works for real, answer generation is a labeled placeholder. Set `GROQ_API_KEY` or `GOOGLE_API_KEY` and `GENERATOR_BACKEND=groq`/`gemini` in `.env` for real answers.
+`GOOGLE_API_KEY` must be set in `.env` for answer generation — it is not baked into the image. Without it the app still starts and retrieval works, but the first question raises `RuntimeError: GOOGLE_API_KEY not set`.
 
 ## HuggingFace Spaces (Docker SDK)
 
@@ -27,7 +27,7 @@ HF Spaces are their own git repos, separate from this GitHub repo, so this repo'
    app_port: 7860
    ---
    ```
-5. In the Space's **Settings → Repository secrets**, add `GROQ_API_KEY` or `GOOGLE_API_KEY` and set `GENERATOR_BACKEND` so the deployed demo gives real answers, not the mock placeholder.
+5. In the Space's **Settings → Repository secrets**, add `GOOGLE_API_KEY` so the deployed demo can generate answers.
 6. `git add -A && git commit -m "deploy" && git push`.
 
 This step requires an HF account + token and pushes to a public URL, so it's left to you to run rather than done automatically here.

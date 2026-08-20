@@ -4,11 +4,11 @@
 
 Compared against naive RAG (retrieve -> generate, no grading/correction) in
 the ablation sweep's `use_agent` axis. Document grading and query rewriting
-use the configured Generator backend when one with real credentials is
-available; with GENERATOR_BACKEND=mock (the default with no API keys), both
-fall back to cheap heuristics (retrieval-score threshold for grading,
-English-translation-and-retry for rewriting) so the graph is fully
-exercisable offline -- see README for what that does and doesn't validate.
+currently use cheap heuristics rather than the Generator -- a retrieval-score
+threshold for grading, English-translation-and-retry for rewriting -- which
+keeps the graph's routing logic fast, deterministic, and unit-testable
+without an API key. Only the generate step calls the LLM. See README for
+what that does and doesn't validate.
 """
 from __future__ import annotations
 

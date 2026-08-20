@@ -4,12 +4,10 @@ citation accuracy / refusal accuracy (the last computed directly from
 question_type=="unanswerable", not from the judge, since refusal is a
 simple behavioral check).
 
-Requires GENERATOR_BACKEND set to "groq" or "gemini" (with the matching
-API key in .env) for meaningful scores. With the default "mock" backend
-this still runs end-to-end and produces well-formed output, which is
-useful for testing the pipeline, but the scores are not meaningful --
-every run's `backend` field records which was used, and results from the
-mock backend are excluded from README headline numbers.
+Requires GOOGLE_API_KEY in .env -- both the answer generation and the
+judge call go through the Gemini backend, so this is the one eval stage
+that cannot run offline. Every run stamps a `backend` field into its
+result file recording which backend produced the numbers.
 """
 from __future__ import annotations
 
@@ -19,7 +17,7 @@ import time
 from pathlib import Path
 
 from taglish_rag.agent.crag import run_crag, run_naive_rag
-from taglish_rag.config import env, results_path
+from taglish_rag.config import results_path
 from taglish_rag.eval.runner import load_eval_set
 from taglish_rag.generation.generator import get_generator
 from taglish_rag.generation.judge import LLMJudge
@@ -35,7 +33,7 @@ def _looks_like_refusal(answer: str) -> bool:
 
 def run_generation_eval(use_agent: bool, limit: int | None = None, label: str = "") -> dict:
     generator = get_generator()
-    backend = env("GENERATOR_BACKEND", "mock")
+    backend = generator.backend
     # minilm-multilingual: smallest/fastest embedding model, so generation-eval
     # runs (which call the retriever once per eval item, then an LLM/judge call
     # on top) don't also pay bge-m3's heavier CPU cost. Swap once the ablation

@@ -4,8 +4,8 @@ sample (eval/human_labels/sample_qids.txt), per plan section 2: "hand-label
 limitations out loud is a maturity signal."
 
 Usage:
-  1. Run generation eval to produce results/generation_<label>.json (needs a
-     real GENERATOR_BACKEND, not mock).
+  1. Run generation eval to produce results/generation_<label>.json (needs
+     GOOGLE_API_KEY set in .env).
   2. Fill in eval/human_labels/human_labels.jsonl: for each sampled qid, add
      {"qid": ..., "human_acceptable": true/false} based on your own read of
      the system answer in the generation results file.
