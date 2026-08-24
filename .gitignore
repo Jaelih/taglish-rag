@@ -4,16 +4,15 @@ __pycache__/
 .venv/
 venv/
 .env
-.env.example
 .env.local
 .ruff_cache/
 .pytest_cache/
 .coverage
 htmlcov/
-README.md
-todo.md
-next_project_plan.md
-LICENSE
+/todo.md
+/next_project_plan.md
+/ARCHITECTURE.md
+/missings.md
 data\raw\philhealth\PC2024-0037.pdf # on separate commit
 
 # The scraped corpus (data/raw) and its chunked form (data/processed) are
