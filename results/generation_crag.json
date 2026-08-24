@@ -3,12 +3,13 @@
   "backend": "gemini",
   "use_agent": true,
   "n_items": 90,
-  "elapsed_sec": 854.0935504436493,
+  "elapsed_sec": 1127.1950390338898,
   "resumed_from_checkpoint": false,
-  "groundedness": 0.9944444444444445,
-  "correctness": 0.9555555555555556,
-  "citation_accuracy": 0.9888888888888889,
-  "refusal_accuracy_on_unanswerable": 0.16666666666666666,
+  "mean_latency_ms": 8612.36720085144,
+  "groundedness": 1.0,
+  "correctness": 0.9633333333333334,
+  "citation_accuracy": 1.0,
+  "refusal_accuracy_on_unanswerable": 0.2222222222222222,
   "judge_parse_success_rate": 1.0,
   "rows": [
     {
@@ -22,7 +23,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2769.2151069641113,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-01-tl",
@@ -35,20 +43,34 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2197.6442337036133,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-01-tg",
       "question_type": "factual",
       "language": "taglish",
-      "answer": "Pasensya na, ngunit wala sa ibinigay na mga dokumento ang impormasyon tungkol sa deadline ng 2025 Annual Income Tax Return (AITR) filing. Ang tanging impormasyon tungkol sa BIR sa ibinigay na konteksto ay ang RMC No. 29-2024 na tumutukoy sa pag-extend ng deadline ng pagsusumite ng BIR Form No. 2316 para sa taong 2024.",
+      "answer": "Pasensya na, ngunit wala sa ibinigay na mga dokumento ang impormasyon tungkol sa bagong deadline para sa 2025 AITR filing. Ang mga dokumentong may kaugnayan sa BIR ([RMC No. 26-2026 Digest] at [RMC 29-2024]) ay tumatalakay lamang sa deadline ng pagsusumite ng mga compliance requirements sa ilalim ng R.A. 11032 at ang pag-extend ng deadline para sa BIR Form No. 2316 noong 2024.",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2671.0238456726074,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding the 2025 AITR filing deadline or any BIR extensions related to it.",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-02-en",
@@ -61,7 +83,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2208.491325378418,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-02-tl",
@@ -74,7 +103,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2438.8723373413086,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-02-tg",
@@ -87,7 +123,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 44598.64664077759,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-03-en",
@@ -100,7 +143,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2434.7262382507324,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-03-tl",
@@ -113,7 +163,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2369.9471950531006,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-03-tg",
@@ -126,7 +183,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2376.66916847229,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-04-en",
@@ -139,7 +203,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2141.5627002716064,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "bir-04-tl",
@@ -152,7 +223,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 44279.295444488525,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-04-tg",
@@ -165,7 +243,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2627.9871463775635,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-05-en",
@@ -178,7 +263,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2161.33975982666,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-05-tl",
@@ -191,7 +283,14 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2285.714864730835,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding the minimum transaction amount for mandatory invoice issuance by non-VAT-registered sellers.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "bir-05-tg",
@@ -204,7 +303,14 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2130.53035736084,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding the minimum transaction amount for the mandatory issuance of an invoice by a non-VAT seller.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "bir-06-en",
@@ -217,7 +323,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 44747.98035621643,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-06-tl",
@@ -230,20 +343,34 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2917.203426361084,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding the penalties for failing to issue an invoice or the requirements concerning the transaction amount for issuing invoices.",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-06-tg",
       "question_type": "multi_hop",
       "language": "taglish",
-      "answer": "Batay sa mga ibinigay na dokumento, narito ang sagot sa iyong katanungan:\n\n**Tungkol sa Penalty:**\nAyon sa **[RMC No. 77-2024 Digest]** at **[flyer-eopt]**, kung ang isang VAT-registered person ay hindi nag-issue ng invoice o nag-issue ng invoice na may kulang na impormasyon (lalo na kung ang kulang ay ang amount of sales, VAT amount, pangalan at TIN ng buyer/seller, deskripsyon ng goods/services, o petsa ng transaksyon), ang **issuer o seller ang mananagot (liable) para sa non-compliance** sa invoicing requirements.\n\n**Tungkol sa kung mahalaga ba ang amount ng sale:**\nPara sa mga **VAT-registered sellers**, ang pag-issue ng VAT Invoice ay **required para sa bawat sale, barter, exchange, o lease ng goods, properties, o services, anuman ang halaga ng transaksyon** (**[RMC No. 77-2024 Digest]**). Hindi nakadepende sa halaga ang obligasyon ng isang VAT-registered seller na mag-issue ng invoice.\n\n*Source: [RMC No. 77-2024 Digest], [flyer-eopt]*",
+      "answer": "Batay sa **RMC No. 77-2024 Digest**, narito ang mga sagot sa iyong katanungan:\n\n**1. Penalty sa hindi pag-issue ng invoice:**\nAng hindi pag-issue ng invoice (o ang pag-issue ng ibang dokumento gaya ng Official Receipt, Billing Statement, atbp. bilang kapalit nito) ay ituturing na \"failure to issue or non-issuance of Invoice.\" Ang parusa para dito ay:\n*   Multa (penalty) na hindi bababa sa **\u20b11,000.00** ngunit hindi lalampas sa **\u20b150,000.00**; at\n*   Pagkakakulong (imprisonment) na hindi bababa sa **dalawang (2) taon** ngunit hindi lalampas sa **apat (4) na taon** alinsunod sa Section 264(a) ng Tax Code.\n\n**2. Importante ba ang halaga ng benta (sale amount)?**\n**Hindi.** Para sa isang **VAT-registered seller**, kinakailangan niyang mag-issue ng duly registered VAT Invoice para sa bawat benta, barter, exchange, o lease ng mga produkto o serbisyo **anuman ang halaga ng transaksyon** (regardless of the amount of the transaction).\n\n*Source: RMC No. 77-2024 Digest*",
       "groundedness": 1.0,
-      "correctness": 0.5,
+      "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 34864.752769470215,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 1,
+      "citations_verified": true
     },
     {
       "qid": "bir-07-en",
@@ -256,20 +383,34 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2277.6169776916504,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-07-tl",
       "question_type": "multi_hop",
       "language": "tl",
-      "answer": "Batay sa ibinigay na dokumento ([RR 6-2024 (final)]), narito ang impormasyon tungkol sa mga benepisyo para sa micro at small taxpayers:\n\n*   **Espesyal na benepisyo sa civil penalties at interest:** Ang Revenue Regulations No. 6-2024 ay nagpapatupad ng pagpapataw ng **nabawasang (reduced) interest at penalty rates** para sa mga micro at small taxpayers.\n*   **Saklaw ng gross sales:** Ang ibinigay na dokumento ay hindi naglalaman ng tiyak na halaga ng gross sales para maituring na \"Small Taxpayer.\"\n\nHindi ko alam ang tiyak na threshold ng gross sales para sa \"Small Taxpayer\" dahil hindi ito nakasaad sa mga ibinigay na dokumento.",
+      "answer": "Batay sa *flyer-eopt*, narito ang mga detalye para sa mga Small Taxpayer at ang mga espesyal na benepisyo para sa Micro at Small Taxpayers:\n\n*   **Gross Sales Threshold para sa Small Taxpayer:** Ang mga Small Taxpayer ay yaong may gross sales na hindi bababa sa P 3,000,000 ngunit mas mababa sa P 20,000,000.\n*   **Espesyal na Benepisyo sa Civil Penalties at Interest:**\n    *   **Civil Penalties:** Mayroong reduced rate na 10% para sa mga civil penalties sa ilalim ng Section 248 ng Tax Code.\n    *   **Interest:** Mayroong 50% reduction sa interest na ipinapataw sa ilalim ng Section 249 ng Tax Code.\n\nSource: *flyer-eopt*",
       "groundedness": 1.0,
-      "correctness": 0.5,
+      "correctness": 0.9,
       "citation_accuracy": 1.0,
-      "judge_is_refusal": true,
+      "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 13522.097110748291,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 1,
+      "citations_verified": true
     },
     {
       "qid": "bir-07-tg",
@@ -282,7 +423,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3142.563581466675,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-08-en",
@@ -295,7 +443,14 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2617.0361042022705,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages only contain information regarding the temporary reduction of the Percentage Tax rate from 3% to 1% for the period of July 1, 2020, to June 30, 2023, and do not provide the rate applicable for the year 2026.",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-08-tl",
@@ -308,7 +463,14 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3244.778871536255,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding the current Percentage Tax rate for the year 2026; they only discuss a temporary reduction that expired in 2023.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "bir-08-tg",
@@ -321,20 +483,34 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3060.690402984619,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages only contain information regarding the Percentage Tax rate of 1% for the period of July 1, 2020, to June 30, 2023, and do not provide the rate for 2026.",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "bir-09-en",
       "question_type": "unanswerable",
       "language": "en",
-      "answer": "I do not know the answer to your question. The provided documents mention that SSS contributions are considered compensation income, but they do not contain a schedule or table detailing the specific monthly contribution amounts for employees earning \u20b125,000.\n\nSource: [Digest RR 11-2018]",
-      "groundedness": 0.5,
+      "answer": "I don't know. The provided context does not contain information regarding the specific SSS contribution rates or tables for employees earning \u20b125,000 a month.",
+      "groundedness": 1.0,
       "correctness": 1.0,
-      "citation_accuracy": 0.0,
+      "citation_accuracy": 1.0,
       "judge_is_refusal": true,
-      "heuristic_is_refusal": false,
+      "heuristic_is_refusal": true,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 10102.423667907715,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding SSS contribution tables or rates, as the corpus only covers BIR, PhilHealth, and Pag-IBIG.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "bir-09-tl",
@@ -347,7 +523,14 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2801.380395889282,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages contain information about Pag-IBIG and BIR, but do not contain information regarding SSS (Social Security System) contribution tables.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "bir-09-tg",
@@ -360,46 +543,74 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2722.1813201904297,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding SSS contribution tables or rates; they only cover Pag-IBIG, BIR, and PhilHealth.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "bir-10-en",
       "question_type": "ambiguous",
       "language": "en",
-      "answer": "To provide you with the correct penalty amount, I need more information regarding the specific violation you are referring to.\n\nBased on the provided document **[ANNEX C_SCHEDULE OF COMPROMISE]**, the compromise penalties for BIR registration and compliance requirements are as follows:\n\n*   **Failure to Register (branch/other line of business/facility):**\n    *   Cities: \u20b120,000\n    *   1st class municipalities: \u20b110,000\n    *   2nd class municipalities: \u20b15,000\n    *   3rd class municipalities: \u20b12,000\n*   **Failure to Pay & Display the Annual Registration Fee (BIR Form 0605):** \u20b11,000\n*   **Failure to pay annual registration fee (for businesses subject to excise tax):**\n    *   Cities: \u20b130,000\n    *   1st class municipalities: \u20b120,000\n    *   2nd class municipalities: \u20b115,000\n    *   3rd class municipalities: \u20b110,000\n*   **No Certificate of Registration displayed:** \u20b11,000\n*   **Failure to display the poster \"Ask for BIR Receipt\" or \"Notice to the Public to demand receipts / invoice\":** Fine of not more than \u20b11,000.\n\nAdditionally, according to **[RMC No. 77-2024 Digest]**, the penalty for failure to issue or non-issuance of an invoice is not less than \u20b11,000 but not more than \u20b150,000, plus imprisonment for not less than two years but not more than four years.\n\nIf your question refers to a different type of violation or a Pag-IBIG-related concern, please provide more details so I can assist you further.",
+      "answer": "The penalty you have to pay depends on the specific violation:\n\n**For Invoicing Violations (BIR):**\nAccording to **[RMC No. 77-2024 Digest]**, failure to issue an invoice or issuing supplementary documents (such as Official Receipts, Payment Receipts, Collection Receipts, Billing Statements, or Statements of Account) as evidence of sales is subject to a penalty of **not less than \u20b11,000.00 but not more than \u20b150,000.00**, and imprisonment for not less than two years but not more than four years.\n\n**For Registration and Compliance Violations (BIR):**\nAccording to **[ANNEX C_SCHEDULE OF COMPROMISE]**, the compromise penalties are as follows:\n\n*   **Failure to Register (Branch/other line of business/facility):**\n    *   Cities: \u20b120,000\n    *   1st class municipalities: \u20b110,000\n    *   2nd class municipalities: \u20b15,000\n    *   3rd class municipalities: \u20b12,000\n*   **Failure to Pay & Display the Annual Registration Fee (BIR Form 0605):** \u20b11,000\n*   **Failure to pay annual registration fee (for specific businesses like distilling/manufacturing):**\n    *   Cities: \u20b130,000\n    *   1st class municipalities: \u20b120,000\n    *   2nd class municipalities: \u20b115,000\n    *   3rd class municipalities: \u20b110,000\n*   **No Certificate of Registration displayed:** \u20b11,000\n*   **Failure to display \"Ask for BIR Receipt\" poster:** Fine of not more than \u20b11,000 or imprisonment of not more than 6 months, or both.\n\nIf your question refers to a different type of violation or a Pag-IBIG-related penalty, the provided context does not contain that information.",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 5603.542804718018,
+      "grade": "weak",
+      "verdict": "ambiguous",
+      "corpus_gap": false,
+      "grade_missing": "The passages provide penalties for specific violations like failure to issue invoices or registration requirements, but do not provide a general penalty amount for all possible violations.",
+      "rewrite_count": 1,
+      "citations_verified": true
     },
     {
       "qid": "bir-10-tl",
       "question_type": "ambiguous",
       "language": "tl",
-      "answer": "Batay sa ibinigay na dokumento na **[RMC No. 77-2024 Digest]**, ang penalty para sa hindi pag-isyu ng Invoice (o pag-isyu ng mga dokumentong hindi kinikilala bilang ebidensya ng benta gaya ng Official Receipt, Payment Receipt, atbp.) ay hindi bababa sa **One Thousand Pesos (\u20b11,000.00)** ngunit hindi lalampas sa **Fifty Thousand Pesos (\u20b150,000.00)**, kasama ang pagkakakulong ng hindi bababa sa dalawang (2) taon hanggang apat (4) na taon.\n\nBukod pa rito, kung ang isang hindi VAT-registered na nagbebenta ay nag-isyu ng VAT Invoice, siya ay mananagot sa:\n*   VAT na ipinapataw sa ilalim ng Section 106 o 108 ng Tax Code (nang walang benepisyo ng input tax credit); at\n*   Limampung porsyentong (50%) surcharge sa ilalim ng Sec. 248(B) ng Tax Code.",
+      "answer": "Ang halaga ng penalty ay nakadepende sa uri ng iyong paglabag. Batay sa dokumentong **[ANNEX C_SCHEDULE OF COMPROMISE]**, narito ang mga halaga para sa ilang partikular na paglabag:\n\n**1. Failure to Register (Branch/Other line of business/facility):**\n*   Cities: \u20b120,000\n*   1st class municipalities: \u20b110,000\n*   2nd class municipalities: \u20b15,000\n*   3rd class municipalities: \u20b12,000\n\n**2. Failure to Pay & Display the Annual Registration Fee (BIR Form 0605):**\n*   \u20b11,000\n\n**3. No Certificate of Registration displayed:**\n*   \u20b11,000\n\n**4. Failure to display the poster \"Ask for BIR Receipt\" or \"Notice to the Public to demand receipts / invoice\":**\n*   Fine of not more than \u20b11,000 (o pagkakakulong na hindi hihigit sa 6 na buwan, o pareho).\n\n**5. Failure to issue an Invoice (ayon sa RMC No. 77-2024):**\n*   Hindi bababa sa \u20b11,000 hanggang \u20b150,000, at pagkakakulong ng hindi bababa sa dalawang (2) taon hanggang apat (4) na taon.\n\n**6. Failure to pay annual registration fee (para sa mga negosyong distilling, rectifying, repacking, compounding, o manufacturing ng excise tax-subject articles):**\n*   Cities: \u20b130,000\n*   1st class municipalities: \u20b120,000\n*   2nd class municipalities: \u20b115,000\n*   3rd class municipalities: \u20b110,000\n\nPara sa ibang uri ng paglabag na hindi nabanggit sa itaas (tulad ng hindi pag-file ng BIR Form 2316), ang mga ito ay pinapatawan ng kaukulang penalty sa ilalim ng Tax Code gaya ng nakasaad sa **[Digest RR 11-2018]**.\n\n*Paalala: Ang pagbabayad ng compromise penalty ay hindi nag-aalis sa obligasyon ng taxpayer na isumite ang mga kinakailangang dokumento.*",
       "groundedness": 1.0,
-      "correctness": 0.8,
+      "correctness": 0.9,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 5613.424301147461,
+      "grade": "weak",
+      "verdict": "ambiguous",
+      "corpus_gap": false,
+      "grade_missing": "The passages provide specific penalty amounts for certain BIR violations, but they do not provide a comprehensive list of all possible penalties, making it impossible to answer the general question of 'how much' without knowing the specific violation.",
+      "rewrite_count": 1,
+      "citations_verified": true
     },
     {
       "qid": "bir-10-tg",
       "question_type": "ambiguous",
       "language": "taglish",
-      "answer": "Batay sa mga ibinigay na dokumento, walang tiyak na halaga ng penalty na nakasaad para sa mga housing loan ng Pag-IBIG.\n\nGayunpaman, kung ang tinutukoy mo ay ang **BIR (Bureau of Internal Revenue)** kaugnay ng hindi pag-isyu ng tamang Invoice, ang penalty ay hindi bababa sa **\u20b11,000.00** ngunit hindi lalampas sa **\u20b150,000.00**, kasama ang pagkakakulong ng hindi bababa sa dalawang (2) taon hanggang apat (4) na taon (Source: *RMC No. 77-2024 Digest*).\n\nPara sa mga housing loan ng Pag-IBIG na may mga hindi nabayarang amortisasyon, ang mga dokumento ay nagbabanggit lamang ng **\"Penalty Condonation\"** bilang isa sa mga opsyon sa ilalim ng *Home Saver Programs*, ngunit hindi nito tinukoy ang eksaktong halaga ng penalty (Source: *Home Saver Programs*).",
+      "answer": "Batay sa ibinigay na dokumento na **[RMC No. 77-2024 Digest]** at **[ANNEX C_SCHEDULE OF COMPROMISE]**, ang penalty ay depende sa uri ng iyong paglabag:\n\n**Para sa Invoicing Requirements (ayon sa RMC No. 77-2024 Digest):**\n*   Ang hindi pag-isyu ng Invoice (o pag-isyu ng mga dokumentong hindi kinikilala bilang ebidensya ng benta gaya ng Official Receipt, Payment Receipt, atbp.) ay may parusang multa na **hindi bababa sa \u20b11,000.00 ngunit hindi hihigit sa \u20b150,000.00**, at pagkakakulong ng hindi bababa sa dalawang (2) taon hanggang apat (4) na taon.\n\n**Para sa Registration at Iba pang Compliance Requirements (ayon sa ANNEX C_SCHEDULE OF COMPROMISE):**\n*   **Failure to Register (branch/other line of business/facility):** Multa na \u20b15,000 hanggang \u20b120,000 at pagkakakulong (depende sa lokasyon ng establisyimento, ang compromise amount ay mula \u20b12,000 hanggang \u20b120,000).\n*   **Failure to Pay & Display Annual Registration Fee (BIR Form 0605):** \u20b11,000.\n*   **No Certificate of Registration displayed:** \u20b11,000.\n*   **Failure to display \"Ask for BIR Receipt\" poster:** Multa na hindi hihigit sa \u20b11,000 o pagkakakulong.\n\n*Paalala: Ang mga impormasyong ito ay base lamang sa mga dokumentong ibinigay. Mainam na kumonsulta sa pinakamalapit na opisina ng BIR para sa iyong partikular na sitwasyon.*",
       "groundedness": 1.0,
       "correctness": 0.8,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 5166.348457336426,
+      "grade": "weak",
+      "verdict": "ambiguous",
+      "corpus_gap": false,
+      "grade_missing": "The passages provide specific penalties for certain BIR violations (like failure to issue invoices or registration issues), but the question is too broad to determine which specific penalty applies to the user's situation.",
+      "rewrite_count": 1,
+      "citations_verified": true
     },
     {
       "qid": "ph-01-en",
@@ -412,20 +623,34 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 1837.9268646240234,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-01-tl",
       "question_type": "factual",
       "language": "tl",
-      "answer": "Batay sa source na **[Members in the Formal Economy | PhilHealth]**, ang mga kwalipikado sa ilalim ng Formal Economy category ay ang mga manggagawa sa gobyerno at pribadong sektor na mayroong itinatag na relasyong employer-employee.",
+      "answer": "Batay sa dokumentong **[Members in the Formal Economy | PhilHealth]**, ang mga kwalipikado sa ilalim ng Formal Economy category ay ang mga manggagawa sa gobyerno at pribadong sektor na mayroong itinatag na relasyong employer-employee.",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3235.755443572998,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-01-tg",
@@ -438,7 +663,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3255.213737487793,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-02-en",
@@ -451,7 +683,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 10548.557043075562,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-02-tl",
@@ -464,7 +703,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2891.690731048584,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-02-tg",
@@ -477,7 +723,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2281.449317932129,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-03-en",
@@ -490,33 +743,54 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3399.338483810425,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-03-tl",
       "question_type": "factual",
       "language": "tl",
-      "answer": "Paumanhin, ngunit walang impormasyon sa ibinigay na mga dokumento tungkol sa kahulugan ng \"Sponsored Member\" sa PhilHealth. Ang mga dokumentong ito ay tumatalakay lamang sa *Auto-Credit Payment Scheme (ACPS)* para sa mga *Health Facilities* at sa *Granting of Immediate Eligibility* para sa mga mamamayan.",
+      "answer": "Paumanhin, ngunit hindi nabanggit sa ibinigay na mga dokumento ang kahulugan ng \"Sponsored Member\" sa PhilHealth. Ang mga dokumentong ito ay tumatalakay lamang sa Auto-Credit Payment Scheme (ACPS), mga alituntunin sa pagpaparehistro ng mga pasyente, at iba't ibang programa ng Pag-IBIG Fund.",
       "groundedness": 1.0,
       "correctness": 0.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3380.3248405456543,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain a definition or explanation of what a 'Sponsored Member' is in the context of PhilHealth.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "ph-03-tg",
       "question_type": "factual",
       "language": "taglish",
-      "answer": "Batay sa ibinigay na dokumento ([PhilHealth Circular PC2026-0011]), ang **Sponsored Member** ay tumutukoy sa mga miyembro na tinasa (assessed) ng Department of Social Welfare and Development (DSWD) o ng isang local government unit (LGU) na walang kakayahang magbayad ng itinakdang premium contributions sa National Health Insurance Program (NHIP).",
+      "answer": "Batay sa ibinigay na konteksto, ang terminong \"Sponsored Member\" ay tumutukoy sa mga miyembro na tinasa (assessed) ng Department of Social Welfare and Development (DSWD) o ng isang local government unit (LGU) na walang kakayahang magbayad ng itinakdang premium contributions sa National Health Insurance Program (NHIP).\n\nSource: [PhilHealth Circular PC2026-0011]",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 9932.228565216064,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-04-en",
@@ -529,7 +803,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2779.0074348449707,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-04-tl",
@@ -542,7 +823,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2405.301094055176,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-04-tg",
@@ -555,7 +843,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3362.727642059326,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-05-en",
@@ -568,7 +863,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3428.7092685699463,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-05-tl",
@@ -581,20 +883,34 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 11014.124631881714,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-05-tg",
       "question_type": "factual",
       "language": "taglish",
-      "answer": "Ang premium contributions ng mga Senior Citizen members sa PhilHealth ay kinukuha mula sa proceeds ng Republic Act No. 10351, na mas kilala bilang Sin Tax Law.\n\nSource: [Senior Citizens | PhilHealth]",
+      "answer": "Ayon sa source na **[Senior Citizens | PhilHealth]**, ang premium contributions ng mga Senior Citizen members ay kinukuha mula sa proceeds ng Republic Act No. 10351, na mas kilala bilang Sin Tax Law.",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2391.9270038604736,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-06-en",
@@ -607,20 +923,34 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 33654.99544143677,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-06-tl",
       "question_type": "multi_hop",
       "language": "tl",
-      "answer": "Batay sa source na **[Senior Citizens | PhilHealth]**, narito ang dalawang paraan para makapag-enroll bilang Senior Citizen member sa PhilHealth at ang mga kinakailangang dokumento:\n\n**1. Sa pamamagitan ng Office for the Senior Citizens Affairs (OSCA):**\n*   Mag-fill out ng isang (1) kopya ng **PhilHealth Member Registration Form (PMRF)**.\n*   Isumite ang nasabing form sa OSCA ng lungsod o munisipalidad kung saan naninirahan ang senior citizen.\n\n**2. Sa pamamagitan ng PhilHealth Local Health Insurance Office (LHIO):**\n*   Mag-fill out ng isang (1) kopya ng **PhilHealth Member Registration Form (PMRF)**.\n*   Mag-attach ng 1x1 na litrato na kinunan sa loob ng huling anim na buwan.\n*   Magpakita ng Senior Citizens\u2019 Identification Card (na inisyu ng OSCA) o anumang valid government-issued ID.\n*   Isumite ang nasabing form.\n\nSa madaling salita, ang **PhilHealth Member Registration Form (PMRF)** ang dokumentong kailangan sa parehong paraan ng pag-enroll.",
+      "answer": "Batay sa source na **[Senior Citizens | PhilHealth]**, narito ang dalawang paraan para makapag-enroll bilang Senior Citizen member sa PhilHealth at ang mga kinakailangang dokumento:\n\n**1. Sa pamamagitan ng Office for the Senior Citizens Affairs (OSCA):**\n*   **Dokumento:** Isang (1) kopya ng *PhilHealth Member Registration Form (PMRF)* na dapat punan at isumite sa OSCA ng lungsod o munisipalidad kung saan nakatira ang senior citizen.\n\n**2. Sa pamamagitan ng PhilHealth Local Health Insurance Office (LHIO):**\n*   **Dokumento:**\n    *   Isang (1) kopya ng *PhilHealth Member Registration Form (PMRF)*.\n    *   1x1 na larawan na kinunan sa loob ng huling anim na buwan.\n    *   *Senior Citizens\u2019 Identification Card* (mula sa OSCA) o anumang valid na government-issued ID.\n\nSa parehong paraan, ang pangunahing dokumentong kinakailangan ay ang **PhilHealth Member Registration Form (PMRF)**.",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2639.1444206237793,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-06-tg",
@@ -633,7 +963,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3557.020902633667,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-07-en",
@@ -646,20 +983,34 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 10369.645357131958,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-07-tl",
       "question_type": "multi_hop",
       "language": "tl",
-      "answer": "Based on the provided documents, I do not have information regarding a specific PhilHealth circular for \"lung cancer screening quality standards.\"\n\nWhile **PhilHealth Circular PC2026-0007** mentions \"Lung CA screening rate (Chest CT Scan)\" as a quality indicator, the provided text does not contain the specific circular number, the law under which it was issued, or the scope of facilities and members for a dedicated lung cancer screening circular.\n\nHowever, for other cancer screening programs mentioned in the context (such as Breast Cancer and Liver Cancer), the circulars (e.g., **PhilHealth Circular PC2025-0024** and **PhilHealth Circular PC2025-0026**) state that they are issued in accordance with **Republic Act No. 11223 (Universal Health Care Act)**. These policies generally cover all PhilHealth-accredited health facilities with the appropriate Department of Health (DOH) license and apply to all Filipinos registered to their respective PhilHealth Yaman ng Kalusugan Program (YAKAP) clinics.",
+      "answer": "Based on the provided documents, the PhilHealth circular regarding quality standards for liver cancer screening (which includes lung cancer screening indicators in its annexes) was issued under **Republic Act No. 11223 (Universal Health Care Act)**.\n\nThe scope of the policy covers:\n*   **Facilities:** All PhilHealth-accredited health facilities that possess the capability and the appropriate Department of Health (DOH) license to provide the relevant imaging services.\n*   **Members:** All Filipinos registered to their respective PhilHealth\u2019s Yaman ng Kalusugan Program (YAKAP) clinics for the covered outpatient benefits.\n\nSources:\n*   [PhilHealth Circular PC2025-0026]\n*   [PhilHealth Circular PC2026-0007]",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
-      "judge_is_refusal": true,
+      "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3399.9545574188232,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding a PhilHealth circular specifically for lung cancer screening quality standards; they only mention lung cancer in a list of indicators in Annex C.",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-07-tg",
@@ -672,20 +1023,34 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 32227.425813674927,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "ph-08-en",
       "question_type": "unanswerable",
       "language": "en",
-      "answer": "I do not know the answer to your question. The provided documents discuss PhilHealth premium payments for self-paying members and the generation of a Statement of Premium Account (SPA), but they do not contain information regarding the specific percentage of an employed member's monthly salary that is deducted as a PhilHealth premium contribution in 2026.",
+      "answer": "I do not know the answer to your question. The provided documents do not contain information regarding the specific percentage of an employed member's monthly salary that is deducted as a PhilHealth premium contribution for 2026.",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3154.561996459961,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages discuss PhilHealth interest waivers and administrative procedures for self-paying members, but they do not state the specific percentage of an employed member's monthly salary deducted as a premium contribution for 2026.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "ph-08-tl",
@@ -698,20 +1063,34 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2887.7780437469482,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding the specific percentage of monthly salary deducted as PhilHealth premium contribution for the year 2026.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "ph-08-tg",
       "question_type": "unanswerable",
       "language": "taglish",
-      "answer": "I don't know. The provided documents do not state the specific percentage of the monthly salary that is deducted as a PhilHealth premium contribution for 2026.",
+      "answer": "Pasensya na, ngunit wala sa mga ibinigay na dokumento ang impormasyon tungkol sa kung ilang porsyento ng buwanang sahod ang ibinabawas bilang PhilHealth premium contribution para sa taong 2026.",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": true,
-      "heuristic_is_refusal": true,
+      "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 10435.602903366089,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not state the specific percentage of monthly salary deducted as PhilHealth premium contribution for 2026.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "ph-09-en",
@@ -724,7 +1103,14 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3158.263921737671,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding the Land Transportation Office (LTO) or driver's license renewal fees.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "ph-09-tl",
@@ -737,59 +1123,94 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": true,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 31864.617347717285,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding LTO services or driver's license renewal fees, as the corpus is limited to BIR and Pag-IBIG Fund services.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "ph-09-tg",
       "question_type": "unanswerable",
       "language": "taglish",
-      "answer": "I am sorry, but I do not know the answer to your question. The provided documents only contain information regarding Pag-IBIG Fund services (such as housing loans and membership contributions) and Bureau of Internal Revenue (BIR) regulations. They do not contain information regarding Land Transportation Office (LTO) driver's license renewal fees.",
+      "answer": "I don't know. The provided documents only contain information regarding Pag-IBIG Fund services (Housing Loans and Membership) and Bureau of Internal Revenue (BIR) regulations. There is no information provided regarding LTO driver's license renewal fees.",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": true,
-      "heuristic_is_refusal": false,
+      "heuristic_is_refusal": true,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3496.7360496520996,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information about LTO driver's license renewal fees; the corpus only covers BIR and Pag-IBIG services.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "ph-10-en",
       "question_type": "ambiguous",
       "language": "en",
-      "answer": "Based on the provided documents, there is no specific information detailing the general steps for a member to claim PhilHealth benefits. The provided context focuses on PhilHealth circulars regarding provider engagement, performance monitoring, and specific benefit packages (such as YAKAP and OECB), but it does not outline the procedure for a member to file or claim their benefits.\n\nI do not know the answer to your question based on the provided context.",
+      "answer": "Based on the provided documents, there is no specific information detailing the general steps for a member to claim PhilHealth benefits.\n\nThe provided context only mentions the following regarding claims:\n*   **PhilHealth Circular PC2026-0004:** States that a unique PhilHealth Identification Number (PIN) is issued upon registration or claims processing, and that PhilHealth benefits for newborn care will be issued in a separate circular.\n*   **PhilHealth Circular PC2025-0028:** Discusses the administrative process for health facilities regarding the Auto-Credit Payment Scheme (ACPS) and the issuance of Official Receipts/Invoices for payments received by health facilities from PhilHealth.\n*   **PhilHealth Circular PC2023-0024:** Mentions that PhilHealth may deduct or charge future claims if members were made to pay out-of-pocket for professional fees or if there were validated claims of under-deduction of benefits.\n\nI do not have information on the specific process for a member to file or claim their benefits.",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 5216.560363769531,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": false,
+      "grade_missing": "The provided passages discuss PhilHealth health facility accreditation, payment schemes, and professional commitments, but do not provide instructions on how a member can claim their benefits.",
+      "rewrite_count": 1,
+      "citations_verified": true
     },
     {
       "qid": "ph-10-tl",
       "question_type": "ambiguous",
       "language": "tl",
-      "answer": "I am sorry, but the provided documents do not contain information on how to claim PhilHealth benefits. The provided context focuses on the implementation of the Auto-Credit Payment Scheme (ACPS) for health facilities, the Provider Data Record (PDR) for health facilities, and general information regarding Pag-IBIG housing loans and membership contributions.",
-      "groundedness": 1.0,
-      "correctness": 1.0,
-      "citation_accuracy": 1.0,
-      "judge_is_refusal": true,
-      "heuristic_is_refusal": false,
-      "expected_refusal": false,
-      "judge_parse_ok": true
-    },
-    {
-      "qid": "ph-10-tg",
-      "question_type": "ambiguous",
-      "language": "taglish",
-      "answer": "Batay sa mga ibinigay na dokumento, walang tiyak na pangkalahatang gabay kung paano mag-claim ng PhilHealth benefit para sa lahat ng uri ng serbisyo. Gayunpaman, ang mga sumusunod na impormasyon ay matatagpuan sa mga dokumento tungkol sa partikular na mga sitwasyon:\n\n*   **Para sa mga emergency cases (PhilHealth Circular PC2025-0020):** Ang pasyente ay kailangang mag-fill out at mag-submit ng PhilHealth Membership Registration Form (PMRF) sa PhilHealth-accredited hospital na nagbigay ng serbisyo. Ang ospital ang magbe-verify ng citizenship status at magsusumite ng PMRF kasama ng claim sa PhilHealth.\n*   **Para sa mga ambulance service providers (PhilHealth Circular PC2025-0022):** Ang mga ambulance service providers ay pinapayagang mag-submit ng claims nang manual sa loob ng tatlong (3) buwan mula sa paglabas ng kanilang PhilHealth Accreditation Number. Kailangan nilang mag-submit ng CF1 at CF2 sa halip na CSF para sa mga manual na claims.\n\nPara sa iba pang mga benepisyo, hindi nabanggit sa ibinigay na konteksto ang proseso ng pag-claim. Iminumungkahi na sumangguni sa opisyal na website ng PhilHealth (www.philhealth.gov.ph) o sa kanilang mga tanggapan para sa kumpletong impormasyon.\n\n**Mga ginamit na source:**\n*   PhilHealth Circular PC2025-0020\n*   PhilHealth Circular PC2025-0022",
+      "answer": "Batay sa mga ibinigay na dokumento, narito ang impormasyon tungkol sa pag-claim ng benepisyo sa PhilHealth:\n\n*   **Para sa mga emergency cases (PhilHealth Circular PC2025-0020):**\n    *   Kailangang punan at isumite ang **PhilHealth Membership Registration Form (PMRF)** sa PhilHealth-accredited hospital na nagbigay ng serbisyo.\n    *   Ang ospital ang magbe-verify ng iyong citizenship status gamit ang kahit isang (1) Philippine government-issued ID bago isumite ang PMRF kasama ang claim sa PhilHealth.\n    *   I-a-validate ng PhilHealth ang iyong citizenship status at ipoproseso ang registration pagkatapos mong ma-discharge.\n    *   Kahit ano pa ang resulta ng validation, babayaran ng PhilHealth ang mga covered health services at commodities kung ang registration ay ginawa sa \"good faith.\"\n\n*   **Para sa mga Foreign Nationals (PhilHealth Circular PC2025-0020):**\n    *   Maaari silang mag-avail ng benepisyo kung sila ay rehistrado sa PhilHealth at sumusunod sa mga kinakailangang qualifying contributions.\n\n*   **Para sa mga Overseas Filipino Workers (OFWs) (PhilHealth Circular PC2025-0020):**\n    *   Maaari ring mag-avail ng package ang mga Pilipinong nagtatrabaho sa ibang bansa, basta't sumusunod sa mga itinakdang panuntunan sa pag-avail ng benepisyo.\n\n*   **Tandaan:** Ang Auto-Credit Payment Scheme (ACPS) ay isang mekanismo para sa pagbabayad ng PhilHealth sa mga Health Facilities (HFs) at hindi ito direktang paraan ng pag-claim para sa mga miyembro (PhilHealth Circular PC2025-0028).\n\n*   **Paalala:** Ang mga nabanggit na proseso ay nakabase sa mga partikular na circular na ibinigay. Kung ang iyong tanong ay tungkol sa ibang uri ng benepisyo na hindi nabanggit sa mga dokumento, hindi ko ito masasagot.\n\n**Source:**\n*   PhilHealth Circular PC2025-0020\n*   PhilHealth Circular PC2025-0028",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 4509.155988693237,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
+    },
+    {
+      "qid": "ph-10-tg",
+      "question_type": "ambiguous",
+      "language": "taglish",
+      "answer": "Batay sa mga ibinigay na dokumento, narito ang mga paraan kung paano mag-avail o mag-claim ng PhilHealth benefits:\n\n**Para sa mga Senior Citizen:**\n*   **Sa mga ospital na may HCI Portal:** Kailangan lamang ipakita ang iyong Senior Citizen card, Member Data Record (MDR), o anumang katanggap-tanggap na patunay ng pagkakakilanlan at edad. Ang ospital ang magpi-print ng PhilHealth Benefit Eligibility Form (PBEF). Kung ang nakasaad sa PBEF ay \"YES,\" ikaw ay entitled sa benepisyo at ito ang magsisilbing basehan para sa automatic deduction.\n*   **Sa mga ospital na walang HCI Portal (o kung ang PBEF ay \"NO\"):** Kailangang ilakip sa mga dokumento ng claim ang mga sumusunod:\n    1.  Duly accomplished na PhilHealth Member Registration Form (PMRF); at\n    2.  Katanggap-tanggap na patunay ng status bilang senior citizen.\n\n**Para sa PhilHealth Outpatient Emergency Care Benefit (OECB):**\n*   Ang benefit package ay dapat i-file gamit ang electronic claims (eClaims) system at electronic Statement of Account (eSOA).\n*   Ang mga dokumentong kailangan para sa claims submission ay:\n    1.  Claim signature form;\n    2.  PHE Transfer Record Form (Annex A);\n    3.  Uploaded images ng ambulance odometer reading mula sa point of dispatch hanggang sa patient handover;\n    4.  Statement of Account (SOA); at\n    5.  Karagdagang requirements para sa OPER2C (tulad ng valid ALS training ng physician on board).\n\n*Pinagkunan: PhilHealth Circular PC2025-0022 at Senior Citizens | PhilHealth*",
+      "groundedness": 1.0,
+      "correctness": 1.0,
+      "citation_accuracy": 1.0,
+      "judge_is_refusal": false,
+      "heuristic_is_refusal": false,
+      "expected_refusal": false,
+      "judge_parse_ok": true,
+      "latency_ms": 5308.781623840332,
+      "grade": "weak",
+      "verdict": "ambiguous",
+      "corpus_gap": false,
+      "grade_missing": "The provided passages only explain how senior citizens can avail of benefits, but do not provide the general procedure for other PhilHealth members to claim benefits.",
+      "rewrite_count": 1,
+      "citations_verified": true
     },
     {
       "qid": "pg-01-en",
@@ -802,7 +1223,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3755.4595470428467,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-01-tl",
@@ -815,20 +1243,34 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3231.9939136505127,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-01-tg",
       "question_type": "factual",
       "language": "taglish",
-      "answer": "Para sa Pag-IBIG MP2 Savings, ang minimum na halaga na maaari mong i-save ay **P500** bawat remittance. Ang investment term nito ay may maturity na **5 taon**.\n\nSource: [Member - MP2 Savings]",
+      "answer": "Base sa source na **[Member - MP2 Savings]**, ang minimum na halaga na maaari mong i-save sa MP2 Savings ay **P500 per remittance**. Ang investment term nito ay **5 taon** bago ito mag-mature.",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 12073.812484741211,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 1,
+      "citations_verified": true
     },
     {
       "qid": "pg-02-en",
@@ -841,7 +1283,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3859.205961227417,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-02-tl",
@@ -854,7 +1303,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 30993.857622146606,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-02-tg",
@@ -867,7 +1323,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3502.5618076324463,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-03-en",
@@ -880,7 +1343,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2721.68231010437,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-03-tl",
@@ -893,7 +1363,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 10800.883769989014,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-03-tg",
@@ -906,7 +1383,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3952.9201984405518,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-04-en",
@@ -919,7 +1403,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 30837.409496307373,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-04-tl",
@@ -932,7 +1423,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3227.6508808135986,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-04-tg",
@@ -945,7 +1443,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3059.8490238189697,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-05-en",
@@ -958,7 +1463,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 10493.21699142456,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-05-tl",
@@ -971,7 +1483,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 4173.020601272583,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-05-tg",
@@ -984,7 +1503,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 31456.103086471558,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-06-en",
@@ -997,7 +1523,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3162.853956222534,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-06-tl",
@@ -1010,7 +1543,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3065.673589706421,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-06-tg",
@@ -1023,7 +1563,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 10347.34845161438,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-07-en",
@@ -1036,7 +1583,14 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 7610.100269317627,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages only contain Pag-IBIG Regular Savings dividend rates up to the year 2025; there is no information regarding the dividend rate for 2026.",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-07-tl",
@@ -1049,7 +1603,14 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 28818.113803863525,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages only contain Pag-IBIG Regular Savings dividend rates up to the year 2025, and do not provide the rate for 2026.",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-07-tg",
@@ -1062,7 +1623,14 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3239.743232727051,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages only contain Pag-IBIG Regular Savings dividend rates up to the year 2025; the rate for 2026 is not available.",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-08-en",
@@ -1075,20 +1643,34 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 2887.687921524048,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding SSS sickness benefits, as the corpus only covers PhilHealth, Pag-IBIG, and general tax information.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "pg-08-tl",
       "question_type": "unanswerable",
       "language": "tl",
-      "answer": "I am sorry, but I do not know the answer to your question. The provided documents do not contain information regarding SSS sickness benefits.",
+      "answer": "Paumanhin, ngunit wala sa ibinigay na impormasyon ang sagot sa iyong tanong tungkol sa SSS sickness benefit. Ang mga dokumentong ibinigay ay tungkol lamang sa mga serbisyo ng Pag-IBIG Fund at PhilHealth.",
       "groundedness": 1.0,
       "correctness": 1.0,
       "citation_accuracy": 1.0,
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 10425.262689590454,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding SSS sickness benefits as they only cover Pag-IBIG and PhilHealth services.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "pg-08-tg",
@@ -1101,33 +1683,54 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": true,
       "expected_refusal": true,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 4014.739751815796,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding SSS sickness benefits as they focus on Pag-IBIG and PhilHealth services.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "pg-09-en",
       "question_type": "ambiguous",
       "language": "en",
-      "answer": "The amount you can borrow from Pag-IBIG depends on the specific loan program:\n\n*   **Pag-IBIG Housing Loan:** You can borrow up to **\u20b110 million**.\n*   **Pag-IBIG Multi-Purpose Loan (MPL):** You can borrow up to **90% of your Pag-IBIG Regular Savings**.\n*   **Pag-IBIG Calamity Loan:** You can borrow up to **90% of your savings**.\n*   **Pag-IBIG Affordable Housing Loan:** This program offers a 100% loan-to-value ratio for socialized housing needs.\n\n*Sources: [Regular Housing - Regular Housing Loan], [Cash Loans - Calamity Loan], [Cash Loans - MPL], [Member - Affordable Housing Loan]*",
+      "answer": "The amount you can borrow from Pag-IBIG depends on the specific loan program:\n\n*   **Pag-IBIG Housing Loan:** You can borrow up to **\u20b110 million** per member (Source: *Regular Housing - Regular Housing Loan*).\n*   **Pag-IBIG Calamity Loan:** You can borrow up to **90% of your savings** (Source: *Cash Loans - Calamity Loan*).\n\nFor other loan programs mentioned in the provided context (such as the Multi-Purpose Loan, Home Improvement Loan, or HELPs), the specific maximum loanable amounts are not stated. I do not know the specific borrowing limits for those programs based on the provided text.",
       "groundedness": 1.0,
       "correctness": 0.8,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 30224.527835845947,
+      "grade": "weak",
+      "verdict": "ambiguous",
+      "corpus_gap": false,
+      "grade_missing": "The provided passages specify loan limits for the Pag-IBIG Housing Loan (up to \u20b110 million) and the Pag-IBIG Calamity Loan (up to 90% of savings), but do not provide the borrowing limits for other Pag-IBIG loan programs like the Multi-Purpose Loan or the Short-Term Loan for Home Improvement.",
+      "rewrite_count": 1,
+      "citations_verified": true
     },
     {
       "qid": "pg-09-tl",
       "question_type": "ambiguous",
       "language": "tl",
-      "answer": "Batay sa ibinigay na dokumento, narito ang impormasyon tungkol sa halagang maaaring hiramin:\n\n*   **Pag-IBIG Affordable Housing Loan:** Ang dokumento ay hindi nagbigay ng tiyak na maximum na halaga ng loan, ngunit binanggit nito ang halimbawa ng **\u20b1950,000** para sa socialized home loan (house and lot) at **\u20b11.8M** para sa condominium units na kwalipikado sa 3% subsidized annual interest rate.\n*   **Expanded 4PH Program:** Hindi nakasaad sa dokumento ang tiyak na halaga na maaaring hiramin sa ilalim ng programang ito.\n\nAng dokumento ay hindi nagbigay ng impormasyon tungkol sa limitasyon ng halaga para sa ibang uri ng loan (tulad ng cash loan).\n\n**Source:** *[Member - Affordable Housing Loan]* at *[4PH]*",
+      "answer": "Depende sa uri ng loan na iyong aapplyan, narito ang mga limitasyon sa halagang maaari mong hiramin ayon sa mga ibinigay na dokumento:\n\n*   **Pag-IBIG Housing Loan (Regular):** Maaari kang humiram ng hanggang **\u20b110 milyon**.\n*   **Pag-IBIG Multi-Purpose Loan (MPL):** Maaari kang humiram ng hanggang **90% ng iyong Pag-IBIG Regular Savings**.\n*   **Pag-IBIG Calamity Loan:** Maaari kang humiram ng hanggang **90% ng iyong Pag-IBIG Regular Savings**.\n\nPara sa *Pag-IBIG Affordable Housing Loan* at *Short-Term Loan for Home Improvement*, hindi nakasaad sa ibinigay na teksto ang eksaktong maximum na halaga na maaaring hiramin.\n\n**Mga Pinagkunan:**\n*   [Regular Housing - Regular Housing Loan]\n*   [Cash Loans - Calamity Loan]\n*   [Cash Loans - MPL]",
       "groundedness": 1.0,
       "correctness": 0.8,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 4469.330072402954,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 1,
+      "citations_verified": true
     },
     {
       "qid": "pg-09-tg",
@@ -1140,20 +1743,34 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 10855.215787887573,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-10-en",
       "question_type": "ambiguous",
       "language": "en",
-      "answer": "To claim your Pag-IBIG savings, the required documents depend on the type of savings and the reason for the claim:\n\n**For Regular Savings:**\n*   **Maturity Claims (after 240 monthly savings):**\n    *   Accomplished Application for Provident Benefits (APB) Claim Form.\n    *   Pag-IBIG Loyalty Card or Pag-IBIG Loyalty Card Plus.\n    *   One (1) valid ID of the member.\n    *   SSS employment history (if applicable).\n*   **Optional Withdrawal (after 180 continuous monthly savings):**\n    *   Accomplished Application for Provident Benefits (APB) Claim Form (1 Original).\n    *   Pag-IBIG Loyalty Card or Pag-IBIG Loyalty Card Plus.\n    *   One (1) valid ID of the member (1 Photocopy).\n*   **Retirement Claims:**\n    *   Accomplished APB Claim Form.\n    *   Pag-IBIG Loyalty Card or Pag-IBIG Loyalty Card Plus.\n    *   One (1) valid ID of the member.\n    *   SSS employment history (if applicable).\n    *   Specific supporting documents based on employment type (e.g., Order of Retirement for AFP/PNP/BJMP/BFP, Service Record, Certificate of Early Retirement for private employees, or GSIS Retirement Voucher for government employees).\n*   **Death Claims:**\n    *   Accomplished APB Claim Form.\n    *   PSA-issued Death Certificate.\n    *   Birth/Marriage Certificates (as applicable).\n    *   Proof of Surviving Legal Heirs.\n    *   Affidavit/Declaration of guardianship for minor children.\n    *   Valid IDs of claimant/witnesses/beneficiaries.\n    *   Joint Affidavit of Cohabitation (for single members).\n\n**For MP2 Savings:**\n*   **Maturity Claims (after 5 years):**\n    *   Accomplished Application for Provident Benefits (APB) Claim Form.\n    *   Pag-IBIG Loyalty Card or Pag-IBIG Loyalty Card Plus.\n    *   One (1) valid ID of the member.\n*   **Death Claims:**\n    *   Accomplished APB Claim Form.\n    *   PSA-issued Death Certificate.\n    *   Birth/Marriage Certificates (as applicable).\n    *   Proof of Surviving Legal Heirs (HQP-PFF-030).\n    *   Affidavit/Declaration of guardianship for minor children (HQP-PFF-028).\n    *   Valid IDs of claimant/witnesses/beneficiaries.\n    *   Joint Affidavit of Cohabitation (for single members).\n*   **Other Grounds (e.g., Permanent Departure, Permanent Total Disability, Critical Illness, etc.):**\n    *   Accomplished APB Claim Form plus specific supporting documents related to the ground for claiming.\n\n*Source: [Claims - Regular Savings], [Claims - MP2 Savings]*",
+      "answer": "Based on the provided documents, the requirements to claim your savings depend on the type of savings account:\n\n**For Regular Savings (Maturity Claims):**\n*   Accomplished Application for Provident Benefits (APB) Claim Form\n*   Pag-IBIG Loyalty Card or Pag-IBIG Loyalty Card Plus\n*   One (1) valid ID of the member\n*   SSS employment history (if applicable)\n\n**For MP2 Savings (Maturity Claims):**\n*   Accomplished Application for Provident Benefits (APB) Claim Form\n*   Pag-IBIG Loyalty Card or Pag-IBIG Loyalty Card Plus\n*   One (1) valid ID of the member\n\n*Source: [Claims - Regular Savings], [Claims - MP2 Savings]*",
       "groundedness": 1.0,
-      "correctness": 1.0,
+      "correctness": 0.7,
       "citation_accuracy": 1.0,
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 3321.392774581909,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     },
     {
       "qid": "pg-10-tl",
@@ -1166,7 +1783,14 @@
       "judge_is_refusal": true,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 5866.8372631073,
+      "grade": "weak",
+      "verdict": "incorrect",
+      "corpus_gap": true,
+      "grade_missing": "The provided passages do not contain information regarding the requirements or documents needed to claim Pag-IBIG savings.",
+      "rewrite_count": 0,
+      "citations_verified": false
     },
     {
       "qid": "pg-10-tg",
@@ -1179,7 +1803,14 @@
       "judge_is_refusal": false,
       "heuristic_is_refusal": false,
       "expected_refusal": false,
-      "judge_parse_ok": true
+      "judge_parse_ok": true,
+      "latency_ms": 4544.379234313965,
+      "grade": "strong",
+      "verdict": "correct",
+      "corpus_gap": false,
+      "grade_missing": "",
+      "rewrite_count": 0,
+      "citations_verified": true
     }
   ]
 }
