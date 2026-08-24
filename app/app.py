@@ -4,6 +4,8 @@ cites. Deployed to HuggingFace Spaces (see README `## Demo`).
 """
 from __future__ import annotations
 
+import os
+
 import gradio as gr
 
 from taglish_rag.agent.crag import run_crag, run_naive_rag
@@ -18,7 +20,12 @@ _grader = None
 def _lazy_init():
     global _retriever, _generator, _grader
     if _retriever is None:
-        _retriever = Retriever(RetrievalConfig(embedding_model="minilm-multilingual"))
+        # bge-m3, not minilm-multilingual: minilm scores 16.7% Recall@1 on the
+        # Tagalog eval split vs. bge-m3's 56.2% (see README ablations), and
+        # Tagalog questions are the first thing anyone tries on this demo.
+        # The Dockerfile ships the precomputed passage embeddings for this
+        # model + chunk set, so startup doesn't re-embed the corpus.
+        _retriever = Retriever(RetrievalConfig(embedding_model="bge-m3"))
         _generator = get_generator()
         _grader = LLMGrader(_generator)
 
@@ -68,7 +75,11 @@ with gr.Blocks(title="Taglish-RAG") as demo:
 
     ask_btn.click(ask, inputs=[question, use_agent], outputs=[answer_box, citations_box])
     question.submit(ask, inputs=[question, use_agent], outputs=[answer_box, citations_box])
-    # gr.Examples(examples=EXAMPLES, inputs=[question, use_agent])
+    gr.Examples(examples=EXAMPLES, inputs=[question, use_agent])
 
 if __name__ == "__main__":
-    demo.launch()
+    # GRADIO_SHARE=1 opens a public *.gradio.live tunnel to this process --
+    # useful for sharing a demo off a laptop without hosting it. Defaults off
+    # so the containerized deploy never tunnels out of the Space.
+    share = os.environ.get("GRADIO_SHARE", "").strip().lower() in ("1", "true", "yes")
+    demo.launch(share=share)

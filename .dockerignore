@@ -4,6 +4,9 @@
 .ruff_cache/
 __pycache__/
 data/index/
+# ...except the one precomputed passage-embedding cache the deployed app
+# needs, so the container doesn't re-embed the corpus on every cold start.
+!data/index/embeddings/bge-m3__passage__c85f0934803604dd.npy
 data/processed/doc_text_raw/
 data/processed/doc_text_clean/
 results/

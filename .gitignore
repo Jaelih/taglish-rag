@@ -7,6 +7,8 @@ venv/
 .env.local
 .ruff_cache/
 .pytest_cache/
+# Written by gradio at runtime when share=True (holds the tunnel's TLS cert).
+.gradio/
 .coverage
 htmlcov/
 /todo.md
