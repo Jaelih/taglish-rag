@@ -23,7 +23,7 @@ Unanswerable items are deliberately adversarial: several (`bir-08`, `pg-07`) cit
 
 ## Known limitations
 
-- **70 vs. 120 questions**: the original plan targeted 120 (50 factual / 30 multi-hop / 25 unanswerable / 15 ambiguous). This v1 ships 90, scaled proportionally, prioritizing that every gold answer be independently verified against source text over hitting a round number.
+- **90 vs. 120 questions**: the original plan targeted 120 (50 factual / 30 multi-hop / 25 unanswerable / 15 ambiguous). This v1 ships 90, scaled proportionally, prioritizing that every gold answer be independently verified against source text over hitting a round number.
 - **Corpus staleness**: the corpus is a snapshot from a single scrape session; several BIR circulars reference rates/deadlines that are themselves time-bound (e.g. a temporary 2020–2023 tax rate). This is intentional — see the unanswerable-question design above — but means gold answers should not be treated as current tax/benefit advice.
 - **PhilHealth 2024 circulars**: several 2024 PDF circulars extracted as empty text (scanned/image-based PDFs with no text layer); no eval questions cite them.
 - **Single annotator**: all 90 items were authored by one person in one pass. No inter-annotator agreement was computed for the gold answers themselves (only for the LLM-judge vs. human agreement — see `eval/human_labels/`).
