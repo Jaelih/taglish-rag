@@ -68,7 +68,7 @@ with gr.Blocks(title="Taglish-RAG") as demo:
 
     ask_btn.click(ask, inputs=[question, use_agent], outputs=[answer_box, citations_box])
     question.submit(ask, inputs=[question, use_agent], outputs=[answer_box, citations_box])
-    gr.Examples(examples=EXAMPLES, inputs=[question, use_agent])
+    # gr.Examples(examples=EXAMPLES, inputs=[question, use_agent])
 
 if __name__ == "__main__":
     demo.launch()
