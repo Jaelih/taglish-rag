@@ -24,6 +24,7 @@ import time
 from pathlib import Path
 
 from taglish_rag.agent.crag import run_crag, run_naive_rag
+from taglish_rag.agent.grader import LLMGrader
 from taglish_rag.config import results_path
 from taglish_rag.eval.runner import load_eval_set
 from taglish_rag.generation.generator import get_generator
@@ -105,6 +106,7 @@ def _summarize(
         # end-to-end timing of the full set.
         "elapsed_sec": elapsed,
         "resumed_from_checkpoint": resumed,
+        "mean_latency_ms": _mean("latency_ms"),
         "groundedness": _mean("groundedness"),
         "correctness": _mean("correctness"),
         "citation_accuracy": _mean("citation_accuracy"),
@@ -129,6 +131,7 @@ def run_generation_eval(
     # sweep picks a winning embedding model for the "real" run.
     retriever = Retriever(RetrievalConfig(embedding_model="minilm-multilingual"))
     judge = LLMJudge(generator)
+    grader = LLMGrader(generator)
 
     items = load_eval_set()
     if limit:
@@ -166,10 +169,12 @@ def run_generation_eval(
             prefix = f"[{position:3d}/{total}] {item.qid} ({item.language}/{item.question_type})"
             print(f"{prefix} generating...", flush=True)
 
+            item_t0 = time.time()
             if use_agent:
-                state = run_crag(retriever, item.question, generator)
+                state = run_crag(retriever, item.question, generator, grader)
             else:
                 state = run_naive_rag(retriever, item.question, generator)
+            latency_ms = (time.time() - item_t0) * 1000
 
             answer = state.get("answer", "")
             context = state.get("context", "")
@@ -193,6 +198,20 @@ def run_generation_eval(
                 "heuristic_is_refusal": predicted_refusal,
                 "expected_refusal": item.question_type == "unanswerable",
                 "judge_parse_ok": judge_score.parse_ok,
+                # Wall time for retrieve(+grade+rewrite)+generate(+verify) only --
+                # excludes the judge call below, so this is the fair CRAG-vs-naive
+                # comparison (the judge costs the same regardless of which path
+                # produced the answer).
+                "latency_ms": latency_ms,
+                # CRAG trace -- naive RAG never sets these (no grading/rewrite/
+                # verify step), so they come back None on naive rows rather
+                # than a misleading default.
+                "grade": state.get("grade"),
+                "verdict": state.get("verdict"),
+                "corpus_gap": state.get("corpus_gap"),
+                "grade_missing": state.get("grade_missing"),
+                "rewrite_count": state.get("rewrite_count"),
+                "citations_verified": state.get("citations_verified"),
             }
             rows.append(row)
             _append_checkpoint(partial, row)
@@ -202,6 +221,7 @@ def run_generation_eval(
             print(
                 f"{prefix} done  g={_fmt_score(row['groundedness'])} "
                 f"c={_fmt_score(row['correctness'])} cite={_fmt_score(row['citation_accuracy'])}"
+                f"  latency={latency_ms:.0f}ms"
                 f"  | elapsed {_fmt_duration(elapsed)} eta ~{_fmt_duration(eta)}",
                 flush=True,
             )
