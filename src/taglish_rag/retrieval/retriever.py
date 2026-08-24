@@ -47,6 +47,7 @@ class Retriever:
         self.cfg = cfg
         self.chunks = load_chunks(cfg.chunk_size, cfg.overlap)
         self.chunk_ids = [c["chunk_id"] for c in self.chunks]
+        self.chunks_by_id = {c["chunk_id"]: c for c in self.chunks}
         self.texts_by_id = {c["chunk_id"]: c["text"] for c in self.chunks}
         self.doc_id_by_chunk = {c["chunk_id"]: c["doc_id"] for c in self.chunks}
 
