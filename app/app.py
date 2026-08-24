@@ -9,29 +9,35 @@ import gradio as gr
 from taglish_rag.agent.crag import run_crag, run_naive_rag
 from taglish_rag.generation.generator import get_generator
 from taglish_rag.retrieval.retriever import Retriever, RetrievalConfig
+from taglish_rag.agent.grader import LLMGrader
 
 _retriever = None
 _generator = None
-
+_grader = None
 
 def _lazy_init():
-    global _retriever, _generator
+    global _retriever, _generator, _grader
     if _retriever is None:
         _retriever = Retriever(RetrievalConfig(embedding_model="minilm-multilingual"))
         _generator = get_generator()
-    return _retriever, _generator
+        _grader = LLMGrader(_generator)
+
+    return _retriever, _generator, _grader
 
 
 def ask(question: str, use_agent: bool) -> tuple[str, str]:
     if not question.strip():
         return "", ""
-    retriever, generator = _lazy_init()
-    state = (run_crag if use_agent else run_naive_rag)(retriever, question, generator)
+    retriever, generator, grader = _lazy_init()
+    if use_agent:
+        state = run_crag(retriever, question, generator, grader)
+    else:
+        state = run_naive_rag(retriever, question, generator)
 
     answer = state.get("answer", "(no answer)")
     seen_titles = []
     for r in state.get("retrieved", []):
-        chunk = next(c for c in retriever.chunks if c["chunk_id"] == r.chunk_id)
+        chunk = retriever.chunks_by_id[r.chunk_id]
         entry = f"- **{chunk['title']}** ({chunk['agency'].upper()}) — {chunk['url']}"
         if entry not in seen_titles:
             seen_titles.append(entry)
