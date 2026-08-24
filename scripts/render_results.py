@@ -22,6 +22,14 @@ SUMMARY_PATH = ROOT / "results" / "ablation_summary.json"
 BASELINE_PATH = ROOT / "results" / "retrieval_run.json"
 README_PATH = ROOT / "README.md"
 
+# The naive-vs-CRAG axis isn't part of the retrieval ablation sweep -- it comes
+# from two separate generation runs. Rendered only if both exist, so the README
+# degrades to "not yet run" on a clone without a configured key.
+GENERATION_PATHS = {
+    "naive_rag": ROOT / "results" / "generation_naive_rag.json",
+    "crag": ROOT / "results" / "generation_crag.json",
+}
+
 RESULTS_MARKER = "<!-- RESULTS_TABLE_PLACEHOLDER -->"
 ABLATION_MARKER = "<!-- ABLATION_TABLE_PLACEHOLDER -->"
 
@@ -169,12 +177,50 @@ def render_ablation_table(summary: dict) -> str:
 
         sections.append("\n".join(lines))
 
-    pending_lines = ["### Not yet run", ""]
-    for _, desc in PENDING_AXES.items():
-        pending_lines.append(f"- **{desc}** -- blocked on a configured `GOOGLE_API_KEY` (see `docs/DEPLOY.md`).")
-    sections.append("\n".join(pending_lines))
+    sections.append(render_generation_section())
 
     return "\n\n".join(sections)
+
+
+def render_generation_section() -> str:
+    title = AXIS_TITLES.get("naive_vs_crag", PENDING_AXES["naive_vs_crag"])
+    runs = {}
+    for key, path in GENERATION_PATHS.items():
+        if not path.exists():
+            return "\n".join(
+                [
+                    "### Not yet run",
+                    "",
+                    f"- **{PENDING_AXES['naive_vs_crag']}** -- blocked on a configured "
+                    "`GOOGLE_API_KEY` (see `docs/DEPLOY.md`).",
+                ]
+            )
+        runs[key] = json.loads(path.read_text(encoding="utf-8"))
+
+    lines = [f"### {title}", ""]
+    lines.append(
+        "| Config | n | Groundedness | Correctness | Citation acc. | Refusal acc. | Mean latency |"
+    )
+    lines.append("|---|---|---|---|---|---|---|")
+    for label, key in (("Naive RAG", "naive_rag"), ("CRAG (grade → rewrite → verify)", "crag")):
+        r = runs[key]
+        lines.append(
+            f"| {label} | {r['n_items']} | {fmt(r['groundedness'])} | {fmt(r['correctness'])} | "
+            f"{fmt(r['citation_accuracy'])} | {fmt(r['refusal_accuracy_on_unanswerable'])} | "
+            f"{r['mean_latency_ms'] / 1000:.1f}s |"
+        )
+    lines.append("")
+    lines.append(
+        "Both arms use the same retriever (minilm-multilingual) and the same judge, so the only "
+        "difference is the agent loop. CRAG buys "
+        f"{(runs['crag']['correctness'] - runs['naive_rag']['correctness']) * 100:.1f} points of "
+        f"correctness for {runs['crag']['mean_latency_ms'] / runs['naive_rag']['mean_latency_ms']:.1f}x "
+        "the latency -- the grading call and any rewrite-and-retry are extra round trips. Latency "
+        "excludes the judge call, which is identical on both arms. **Refusal accuracy is measured "
+        "by a string-matcher that undercounts correct refusals -- read that column as a lower "
+        "bound, not as a comparison between the two arms** (see Limitations)."
+    )
+    return "\n".join(lines)
 
 
 def replace_block(readme: str, marker: str, body: str) -> str:
